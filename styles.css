@@ -1,0 +1,325 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("/images/space.jpg") no-repeat;
+  background-size: cover;
+  background-color: black;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.text-blue {
+  color: #0000ff;
+}
+
+/* header */
+
+header {
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* navbar */
+
+nav {
+  height: 4em;
+  display: grid;
+  grid-template: 100%/ 4fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  place-items: center;
+}
+
+nav a {
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 300;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition: all 300ms ease-in-out;
+}
+
+.nav-link:hover::before {
+  width: 100%;
+}
+
+/* carousel */
+
+.carousel {
+  height: 90vh;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template: 100% / repeat(2, 1fr);
+  place-items: center;
+  display: none;
+}
+
+.prev,
+.next {
+  position: absolute;
+  font-size: 1.65rem;
+  color: #fff;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  padding: 0.5em;
+  z-index: 10;
+  background-color: #121212;
+}
+
+.prev {
+  left: 1em;
+}
+
+.next {
+  right: 1em;
+}
+
+.description {
+  color: #fff;
+  width: 75%;
+  justify-self: end;
+  animation: slideUp 1s ease-in-out 1;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    margin-top: 5em;
+  }
+
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+.sub-title {
+  font-style: italic;
+}
+
+.content {
+  margin-top: 1.5em;
+}
+
+.learn-more-btn {
+  background: transparent;
+  border: 0.15em solid #fff;
+  font-size: 1.25rem;
+  color: #fff;
+  padding: 0.45em 1em;
+  margin-top: 1em;
+  border-radius: 1.875rem;
+  box-shadow: 0 0 0 #fff inset;
+  transition: all 750ms ease-in-out;
+  cursor: pointer;
+}
+
+.learn-more-btn:hover {
+  box-shadow: 300px 0 300px #fff inset;
+  color: #000;
+}
+
+.stage {
+  width: 600px;
+  height: 600px;
+  display: inline-block;
+  margin: 20px;
+  -webkit-perspective: 1200px;
+  -moz-perspective: 1200px;
+  -ms-perspective: 1200px;
+  -o-perspective: 1200px;
+  perspective: 1200px;
+  -webkit-perspective-origin: 50% 50%;
+  -moz-perspective-origin: 50% 50%;
+  -ms-perspective-origin: 50% 50%;
+  -o-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%;
+}
+
+/* planets */
+
+.planet {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border-radius: 50%;
+  position: relative;
+}
+
+.planet:before {
+  content: "";
+  position: absolute;
+  top: 1%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 50% 0px,
+    #ffffff,
+    rgba(255, 255, 255, 0) 30%
+  );
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  z-index: 2;
+  animation: reveal 1.5s linear 1;
+}
+
+@keyframes reveal {
+  0%,
+  99% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.venus {
+  background: url("/images/venus.png") no-repeat;
+  background-size: 100%;
+  box-shadow: 0 -8px 15px rgba(199, 152, 113, 0.5), -50px -50px 50px #000 inset,
+    0 10px 15px #000;
+  animation: rotate 1.5s ease-in 1, shadowVenus 1.5s linear 1;
+}
+
+.mercury {
+  background: url("/images/mercury.png") no-repeat;
+  background-size: 100%;
+  box-shadow: 0 -10px 15px rgba(117, 66, 25, 0.5), -50px -50px 50px #000 inset,
+    0 10px 15px #000;
+  animation: rotate 1.5s ease-in 1, shadowMercury 1.5s linear 1;
+}
+
+.earth {
+  background: url("/images/earth.png") no-repeat;
+  background-size: 100%;
+  box-shadow: 0 -10px 15px rgba(94, 136, 190, 0.5), -50px -50px 50px #000 inset,
+    0 10px 15px #000;
+  animation: rotate 1.5s ease-in 1, shadowEarth 1.5s linear 1;
+}
+
+.mars {
+  background: url("/images/mars.png") no-repeat;
+  background-size: 100%;
+  box-shadow: -3px -10px 15px rgba(238, 75, 43, 0.7),
+    -50px -50px 50px #000 inset, 0 10px 15px #000;
+  animation: rotate 1.5s ease-in 1, shadowMars 1.5s linear 1;
+}
+
+@keyframes rotate {
+  0% {
+    background-position: 50% 50%;
+    background-size: 50%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+    background-size: 100%;
+  }
+}
+
+@keyframes shadowMercury {
+  0%,
+  90% {
+    box-shadow: none;
+  }
+
+  100% {
+    box-shadow: 0 -10px 15px rgba(117, 66, 25, 0.5), -50px -50px 50px #000 inset,
+      0 10px 15px #000;
+  }
+}
+
+@keyframes shadowVenus {
+  0%,
+  90% {
+    box-shadow: none;
+  }
+
+  100% {
+    box-shadow: 0 -8px 15px rgba(199, 152, 113, 0.5),
+      -50px -50px 50px #000 inset, 0 10px 15px #000;
+  }
+}
+
+@keyframes shadowEarth {
+  0%,
+  90% {
+    box-shadow: none;
+  }
+
+  100% {
+    box-shadow: 0 -10px 15px rgba(94, 136, 190, 0.5),
+      -50px -50px 50px #000 inset, 0 10px 15px #000;
+  }
+}
+
+@keyframes shadowMars {
+  0%,
+  90% {
+    box-shadow: none;
+  }
+
+  100% {
+    box-shadow: -3px -15px 15px rgba(238, 75, 43, 0.7),
+      -50px -50px 50px #000 inset, 0 10px 15px #000;
+  }
+}
