@@ -28,9 +28,13 @@ function showSlides(n) {
 const spaceship = document.querySelector(".spaceship");
 
 function launch(){
-  spaceship.style.display="block";
+  // spaceship.style.display="block";
 
- myMove();
+//  myMove();
+
+//  console.log(document.body.offsetHeight);
+
+document.getElementById('fact1').scrollIntoView();
   
 }
 
@@ -40,7 +44,7 @@ function myMove() {
   clearInterval(id);
   id = setInterval(frame, 0.01);
   function frame() {
-    if (scrollTop == 2550) {
+    if (scrollTop == 1500) {
       clearInterval(id);
     } else {
       scrollTop++;
