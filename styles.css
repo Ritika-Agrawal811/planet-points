@@ -51,6 +51,10 @@ h4 {
   color: #ffcc00;
 }
 
+.hidden {
+  display: none;
+}
+
 /* header */
 
 header {
@@ -58,6 +62,7 @@ header {
   background-size: cover;
   height: 100vh;
   overflow: hidden;
+  /* padding-top: 5em; */
 }
 
 /* navbar */
@@ -67,6 +72,10 @@ nav {
   display: grid;
   grid-template: 100%/ 4fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   place-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background-color: transparent;
 }
 
 nav a {
@@ -106,7 +115,7 @@ nav a {
 /* carousel */
 
 .carousel {
-  height: 90vh;
+  height: 100vh;
   position: relative;
 }
 
@@ -149,12 +158,13 @@ nav a {
 
 .slideUp {
   animation: slideUp 1s ease-in-out 1;
+  animation-fill-mode: forwards;
 }
 
 @keyframes slideUp {
   0% {
     opacity: 0;
-    margin-top: 5em;
+    margin-top: 6em;
   }
 
   100% {
@@ -181,7 +191,7 @@ nav a {
   border-radius: 1.875rem;
   font-weight: 700;
   box-shadow: 300px 0 300px #ffcc00 inset;
-  transition: all 750ms ease-in-out;
+  transition: all 500ms ease-in-out;
   cursor: pointer;
 }
 
@@ -205,6 +215,7 @@ nav a {
   -ms-perspective-origin: 50% 50%;
   -o-perspective-origin: 50% 50%;
   perspective-origin: 50% 50%;
+  align-self: end;
 }
 
 /* planets */
@@ -381,9 +392,15 @@ nav a {
   color: #fff;
   background: url("/images/space2.jpg") no-repeat;
   background-size: cover;
+  display: none;
 }
 
-.mercury-info {
+#mercury-info,
+#venus-info #earth-info {
+  scroll-margin-top: 3em;
+}
+
+.planet-info-grid {
   display: grid;
   grid-template: repeat(8, 400px) / repeat(2, 1fr);
 }
@@ -393,6 +410,7 @@ nav a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  opacity: 0;
 }
 
 .fact-count {
@@ -412,7 +430,9 @@ nav a {
   color: #ffcc00;
 }
 
-.mercury-info p {
+#mercury-info p,
+#venus-info p,
+#earth-info p {
   width: 55%;
   text-align: center;
   line-height: 1.25em;

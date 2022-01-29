@@ -26,30 +26,87 @@ function showSlides(n) {
 }
 
 const spaceship = document.querySelector(".spaceship");
+let previousPlanet , currentPlanet;
 
-function launch(){
+function launch(id){
   // spaceship.style.display="block";
+   currentPlanet = document.getElementById(id);
 
-//  myMove();
+  //  viewing planet details
+   document.getElementById("planetData").style.display = "block";
 
-//  console.log(document.body.offsetHeight);
+   if(previousPlanet){
+     previousPlanet.classList.add("hidden");
+   }
+   currentPlanet.classList.remove("hidden");
+   currentPlanet.scrollIntoView();
 
-document.getElementById('fact1').scrollIntoView();
+   scrollAnimation(currentPlanet);
+
+   previousPlanet = currentPlanet;
   
 }
 
-function myMove() {
-  let id = null;
-  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  clearInterval(id);
-  id = setInterval(frame, 0.01);
-  function frame() {
-    if (scrollTop == 1500) {
-      clearInterval(id);
-    } else {
-      scrollTop++;
-      console.log(scrollTop);
-      document.documentElement.scrollTop = document.body.scrollTop = scrollTop;
-    }
-  }
+function scrollAnimation(planet){
+
+        // intersection observer - onscroll animation
+
+
+        const facts = planet.querySelectorAll(".facts");
+
+        // animation on facts
+
+        const appearOptions = {
+        threshold:0.5,
+        rootMargin : "0px 0px 50px 0px"
+        }
+
+        const appearOnScroll = new IntersectionObserver( function(entries ,appearOnScroll  ){
+
+        entries.forEach( entry => {
+              if(!entry.isIntersecting){
+                return;
+                  
+              }else{
+                  entry.target.classList.add("slideUp");
+                  appearOnScroll.unobserve(entry.target);
+              }
+        })
+
+        } , appearOptions);
+
+        facts.forEach( fact =>{
+        appearOnScroll.observe(fact);
+        });
+
 }
+
+
+
+  // animation on navbar
+
+  const navbar = document.querySelector("nav");
+  const header = document.querySelector("header");
+
+  const options = {
+    rootMargin : "-200px"
+  }
+
+
+  const linksObserver = new IntersectionObserver( function(entries , linksObserver ){
+
+    entries.forEach( entry =>{
+
+        if(!entry.isIntersecting){
+            navbar.style.backgroundColor = "#000";
+          
+
+        }else{
+          navbar.style.backgroundColor = "transparent";
+        }
+    });
+
+  }, options);
+
+  linksObserver.observe(header);
+
