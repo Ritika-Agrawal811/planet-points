@@ -24,3 +24,28 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "grid";
   
 }
+
+const spaceship = document.querySelector(".spaceship");
+
+function launch(){
+  spaceship.style.display="block";
+
+ myMove();
+  
+}
+
+function myMove() {
+  let id = null;
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  clearInterval(id);
+  id = setInterval(frame, 0.01);
+  function frame() {
+    if (scrollTop == 2550) {
+      clearInterval(id);
+    } else {
+      scrollTop++;
+      console.log(scrollTop);
+      document.documentElement.scrollTop = document.body.scrollTop = scrollTop;
+    }
+  }
+}
