@@ -396,7 +396,8 @@ nav a {
 }
 
 #mercury-info,
-#venus-info #earth-info {
+#venus-info,
+#earth-info {
   scroll-margin-top: 3em;
 }
 
