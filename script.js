@@ -28,8 +28,8 @@ function showSlides(n) {
 const spaceship = document.querySelector(".spaceship");
 let previousPlanet , currentPlanet;
 
-function launch(id){
-  // spaceship.style.display="block";
+function viewFacts(id){
+  
    currentPlanet = document.getElementById(id);
 
   //  viewing planet details
@@ -80,6 +80,7 @@ function scrollAnimation(planet){
         });
 
 }
+
 
 
 

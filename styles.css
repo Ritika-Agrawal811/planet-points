@@ -55,6 +55,12 @@ h4 {
   display: none;
 }
 
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* header */
 
 header {
@@ -453,29 +459,164 @@ img {
   transform: translate(-50%, -50%);
 }
 
-/* spaceship */
+/* Planet Metric */
 
-.spaceship {
-  position: fixed;
-  width: 50px;
-  height: 50px;
-  background-color: #fff;
-  display: none;
-  left: 50%;
-  top: 90%;
-  transform: translate(-50%, -90%);
-  /* animation: travel 15s linear 1;
-  animation-fill-mode: forwards; */
+.planet-metric {
+  width: 90%;
+  max-width: 1200px;
+  display: grid;
+  grid-template: repeat(2, 265px) / repeat(4, 1fr);
+  grid-gap: 5em;
+  margin: 5em 0;
 }
 
-@keyframes travel {
-  0% {
-    left: 15em;
-    top: 90%;
-  }
+.planet-card {
+  /* background-color: red; */
+  display: grid;
+  grid-template: repeat(2, 1fr) / 100%;
+  padding: 0 1.5em;
+}
 
-  100% {
-    left: 90%;
-    top: 250%;
-  }
+.planet-icon {
+  width: 7em;
+  height: 7em;
+  border-radius: 50%;
+  border: 0.2em solid #ffcc00e8;
+  justify-self: center;
+  align-self: center;
+  position: relative;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.saturn-icon:before {
+  content: "";
+  position: absolute;
+  width: 170%;
+  height: 30%;
+  border-radius: inherit;
+  border: 0.1em solid #ffcc006c;
+}
+
+.metrics {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  place-items: center;
+}
+
+.metrics h5 {
+  color: #ffcc00e8;
+  font-size: 0.85rem;
+  font-weight: 300;
+}
+
+.metrics p {
+  text-align: center;
+  color: #fff;
+  font-size: 0.85rem;
+  margin-top: 0.25em;
+}
+
+.planet-letter {
+  position: absolute;
+  height: 50%;
+  width: 1em;
+  bottom: 0;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  transform-origin: top;
+  color: #ffcc00;
+  transition: all 500ms ease-in-out;
+  z-index: 3;
+}
+
+/* planet name - rotation */
+
+.seven-letter:nth-child(1) {
+  transform: rotate(70deg);
+}
+
+.seven-letter:nth-child(2),
+.five-letter:nth-child(1),
+.six-letter:nth-child(1) {
+  transform: rotate(50deg);
+}
+
+.seven-letter:nth-child(3),
+.five-letter:nth-child(2),
+.four-letter:nth-child(1),
+.six-letter:nth-child(2) {
+  transform: rotate(30deg);
+}
+
+.seven-letter:nth-child(4),
+.five-letter:nth-child(3),
+.four-letter:nth-child(2),
+.six-letter:nth-child(3) {
+  transform: rotate(10deg);
+}
+
+.seven-letter:nth-child(5),
+.five-letter:nth-child(4),
+.four-letter:nth-child(3),
+.six-letter:nth-child(4) {
+  transform: rotate(-10deg);
+}
+
+.seven-letter:nth-child(6),
+.five-letter:nth-child(5),
+.four-letter:nth-child(4),
+.six-letter:nth-child(5) {
+  transform: rotate(-30deg);
+}
+
+.seven-letter:nth-child(7),
+.six-letter:nth-child(6) {
+  transform: rotate(-50deg);
+}
+
+/* planet name hover effect */
+
+.planet-icon:hover .seven-letter:nth-child(1) {
+  transform: rotate(100deg);
+}
+
+.planet-icon:hover .seven-letter:nth-child(2),
+.planet-icon:hover .five-letter:nth-child(1),
+.planet-icon:hover .six-letter:nth-child(1) {
+  transform: rotate(80deg);
+}
+
+.planet-icon:hover .seven-letter:nth-child(3),
+.planet-icon:hover .five-letter:nth-child(2),
+.planet-icon:hover .four-letter:nth-child(1),
+.planet-icon:hover .six-letter:nth-child(2) {
+  transform: rotate(60deg);
+}
+
+.planet-icon:hover .seven-letter:nth-child(4),
+.planet-icon:hover .five-letter:nth-child(3),
+.planet-icon:hover .four-letter:nth-child(2),
+.planet-icon:hover .six-letter:nth-child(3) {
+  transform: rotate(40deg);
+}
+
+.planet-icon:hover .seven-letter:nth-child(5),
+.planet-icon:hover .five-letter:nth-child(4),
+.planet-icon:hover .four-letter:nth-child(3),
+.planet-icon:hover .six-letter:nth-child(4) {
+  transform: rotate(20deg);
+}
+
+.planet-icon:hover .seven-letter:nth-child(6),
+.planet-icon:hover .five-letter:nth-child(5),
+.planet-icon:hover .four-letter:nth-child(4),
+.planet-icon:hover .six-letter:nth-child(5) {
+  transform: rotate(0deg);
+}
+
+.planet-icon:hover .seven-letter:nth-child(7),
+.planet-icon:hover .six-letter:nth-child(6) {
+  transform: rotate(-20deg);
 }

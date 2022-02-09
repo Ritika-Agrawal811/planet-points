@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="spaceship"></div>
     <nav>
       <a href="#home" class="logo"
         >Planet<span class="text-yellow fw-700">Points</span></a
@@ -22,19 +21,19 @@
       <a
         href="#planet-carousel"
         class="nav-link"
-        onclick="currentSlide(1); launch('mercury-info')"
+        onclick="currentSlide(1); viewFacts('mercury-info')"
         >Mercury</a
       >
       <a
         href="#planet-carousel"
         class="nav-link"
-        onclick="currentSlide(2) ; launch('venus-info')"
+        onclick="currentSlide(2) ; viewFacts('venus-info')"
         >Venus</a
       >
       <a
         href="#planet-carousel"
         class="nav-link"
-        onclick="currentSlide(3) ; launch('earth-info')"
+        onclick="currentSlide(3) ; viewFacts('earth-info')"
         >Earth</a
       >
       <a href="#planet-carousel" class="nav-link" onclick="currentSlide(4)"
@@ -70,7 +69,7 @@
               of all known planets in the Solar System.
             </p>
 
-            <button class="learn-more-btn" onclick="launch('mercury-info')">
+            <button class="learn-more-btn" onclick="viewFacts('mercury-info')">
               Learn More
             </button>
           </div>
@@ -92,7 +91,7 @@
               human culture for as long as records have existed.
             </p>
 
-            <button class="learn-more-btn" onclick="launch('venus-info')">
+            <button class="learn-more-btn" onclick="viewFacts('venus-info')">
               Learn More
             </button>
           </div>
@@ -114,7 +113,7 @@
               over 4.5 billion years ago.
             </p>
 
-            <button class="learn-more-btn" onclick="launch('earth-info')">
+            <button class="learn-more-btn" onclick="viewFacts('earth-info')">
               Learn More
             </button>
           </div>
@@ -565,6 +564,250 @@
               delivered ice to those areas, or water vapor from Mercury's
               innards could have seeped out and frozen.
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="flex-center">
+      <div class="planet-metric">
+        <div class="planet-card">
+          <div class="planet-icon flex-center">
+            <div class="planet-letter seven-letter">M</div>
+            <div class="planet-letter seven-letter">E</div>
+            <div class="planet-letter seven-letter">R</div>
+            <div class="planet-letter seven-letter">C</div>
+            <div class="planet-letter seven-letter">U</div>
+            <div class="planet-letter seven-letter">R</div>
+            <div class="planet-letter seven-letter">Y</div>
+          </div>
+          <div class="metrics">
+            <div class="moons">
+              <h5>Moons</h5>
+              <p>0</p>
+            </div>
+            <div class="gravity">
+              <h5>Gravity</h5>
+              <p>3.7m/s<sup>2</sup></p>
+            </div>
+
+            <div class="rotation">
+              <h5>Rotation Period</h5>
+              <p>1407.6 hours</p>
+            </div>
+
+            <div class="orbital">
+              <h5>Orbital period</h5>
+              <p>88.0 Days</p>
+            </div>
+          </div>
+        </div>
+        <div class="planet-card">
+          <div class="planet-icon flex-center">
+            <div class="planet-letter five-letter">V</div>
+            <div class="planet-letter five-letter">E</div>
+            <div class="planet-letter five-letter">N</div>
+            <div class="planet-letter five-letter">U</div>
+            <div class="planet-letter five-letter">S</div>
+          </div>
+          <div class="metrics">
+            <div class="moons">
+              <h5>Moons</h5>
+              <p>0</p>
+            </div>
+            <div class="gravity">
+              <h5>Gravity</h5>
+              <p>8.9m/s<sup>2</sup></p>
+            </div>
+
+            <div class="rotation">
+              <h5>Rotation Period</h5>
+              <p>5832.5 hours</p>
+            </div>
+
+            <div class="orbital">
+              <h5>Orbital period</h5>
+              <p>224.7 Days</p>
+            </div>
+          </div>
+        </div>
+        <div class="planet-card">
+          <div class="planet-icon flex-center">
+            <div class="planet-letter five-letter">E</div>
+            <div class="planet-letter five-letter">A</div>
+            <div class="planet-letter five-letter">R</div>
+            <div class="planet-letter five-letter">T</div>
+            <div class="planet-letter five-letter">H</div>
+          </div>
+          <div class="metrics">
+            <div class="moons">
+              <h5>Moons</h5>
+              <p>1</p>
+            </div>
+            <div class="gravity">
+              <h5>Gravity</h5>
+              <p>9.8m/s<sup>2</sup></p>
+            </div>
+
+            <div class="rotation">
+              <h5>Rotation Period</h5>
+              <p>23.9 hours</p>
+            </div>
+
+            <div class="orbital">
+              <h5>Orbital period</h5>
+              <p>365.2 Days</p>
+            </div>
+          </div>
+        </div>
+        <div class="planet-card">
+          <div class="planet-icon flex-center">
+            <div class="planet-letter four-letter">M</div>
+            <div class="planet-letter four-letter">A</div>
+            <div class="planet-letter four-letter">R</div>
+            <div class="planet-letter four-letter">S</div>
+          </div>
+          <div class="metrics">
+            <div class="moons">
+              <h5>Moons</h5>
+              <p>2</p>
+            </div>
+            <div class="gravity">
+              <h5>Gravity</h5>
+              <p>3.7m/s<sup>2</sup></p>
+            </div>
+
+            <div class="rotation">
+              <h5>Rotation Period</h5>
+              <p>24.6 hours</p>
+            </div>
+
+            <div class="orbital">
+              <h5>Orbital period</h5>
+              <p>687.0 Days</p>
+            </div>
+          </div>
+        </div>
+        <div class="planet-card">
+          <div class="planet-icon flex-center">
+            <div class="planet-letter seven-letter">J</div>
+            <div class="planet-letter seven-letter">U</div>
+            <div class="planet-letter seven-letter">P</div>
+            <div class="planet-letter seven-letter">I</div>
+            <div class="planet-letter seven-letter">T</div>
+            <div class="planet-letter seven-letter">E</div>
+            <div class="planet-letter seven-letter">R</div>
+          </div>
+          <div class="metrics">
+            <div class="moons">
+              <h5>Moons</h5>
+              <p>79</p>
+            </div>
+            <div class="gravity">
+              <h5>Gravity</h5>
+              <p>23.1m/s<sup>2</sup></p>
+            </div>
+
+            <div class="rotation">
+              <h5>Rotation Period</h5>
+              <p>9.9 hours</p>
+            </div>
+
+            <div class="orbital">
+              <h5>Orbital period</h5>
+              <p>4331 Days</p>
+            </div>
+          </div>
+        </div>
+        <div class="planet-card">
+          <div class="planet-icon flex-center saturn-icon">
+            <div class="planet-letter six-letter">S</div>
+            <div class="planet-letter six-letter">A</div>
+            <div class="planet-letter six-letter">T</div>
+            <div class="planet-letter six-letter">U</div>
+            <div class="planet-letter six-letter">R</div>
+            <div class="planet-letter six-letter">N</div>
+          </div>
+          <div class="metrics">
+            <div class="moons">
+              <h5>Moons</h5>
+              <p>82</p>
+            </div>
+            <div class="gravity">
+              <h5>Gravity</h5>
+              <p>9.0m/s<sup>2</sup></p>
+            </div>
+
+            <div class="rotation">
+              <h5>Rotation Period</h5>
+              <p>10.7 hours</p>
+            </div>
+
+            <div class="orbital">
+              <h5>Orbital period</h5>
+              <p>10,747 Days</p>
+            </div>
+          </div>
+        </div>
+        <div class="planet-card">
+          <div class="planet-icon flex-center">
+            <div class="planet-letter six-letter">U</div>
+            <div class="planet-letter six-letter">R</div>
+            <div class="planet-letter six-letter">A</div>
+            <div class="planet-letter six-letter">N</div>
+            <div class="planet-letter six-letter">U</div>
+            <div class="planet-letter six-letter">S</div>
+          </div>
+          <div class="metrics">
+            <div class="moons">
+              <h5>Moons</h5>
+              <p>27</p>
+            </div>
+            <div class="gravity">
+              <h5>Gravity</h5>
+              <p>8.7m/s<sup>2</sup></p>
+            </div>
+
+            <div class="rotation">
+              <h5>Rotation Period</h5>
+              <p>17.2 hours</p>
+            </div>
+
+            <div class="orbital">
+              <h5>Orbital period</h5>
+              <p>30,589 Days</p>
+            </div>
+          </div>
+        </div>
+        <div class="planet-card">
+          <div class="planet-icon flex-center">
+            <div class="planet-letter seven-letter">N</div>
+            <div class="planet-letter seven-letter">E</div>
+            <div class="planet-letter seven-letter">P</div>
+            <div class="planet-letter seven-letter">T</div>
+            <div class="planet-letter seven-letter">U</div>
+            <div class="planet-letter seven-letter">N</div>
+            <div class="planet-letter seven-letter">E</div>
+          </div>
+          <div class="metrics">
+            <div class="moons">
+              <h5>Moons</h5>
+              <p>14</p>
+            </div>
+            <div class="gravity">
+              <h5>Gravity</h5>
+              <p>11.0m/s<sup>2</sup></p>
+            </div>
+
+            <div class="rotation">
+              <h5>Rotation Period</h5>
+              <p>16.1 hours</p>
+            </div>
+
+            <div class="orbital">
+              <h5>Orbital period</h5>
+              <p>59,800 Days</p>
+            </div>
           </div>
         </div>
       </div>
