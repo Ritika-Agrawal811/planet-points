@@ -111,3 +111,28 @@ function scrollAnimation(planet){
 
   linksObserver.observe(header);
 
+
+  // close side panel
+  let sidePanel = document.getElementById("solarSideCard");
+
+  function closeSidePanel(){  
+    sidePanel.style.right = "-50%";   
+
+  }
+
+  // open side panel
+  let infoPanelPrevious, infoPanelCurrent;
+
+  infoPanelPrevious = document.getElementById('sideInfoSun');
+
+  function openSidePanel(id){
+    infoPanelCurrent = document.getElementById(id);
+    sidePanel.style.right="0";
+
+    infoPanelPrevious.classList.add('hidden');
+    infoPanelCurrent.classList.remove('hidden');
+
+    infoPanelPrevious = infoPanelCurrent;
+
+  }
+

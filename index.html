@@ -11,6 +11,13 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -227,6 +234,153 @@
         </div>
       </div>
     </header>
+
+    <!-- Solar System -->
+
+    <section class="solar-system-container">
+      <div class="solar-system">
+        <div class="orbit-lines mercury-line"></div>
+        <div class="orbit-lines venus-line"></div>
+        <div class="orbit-lines earth-line"></div>
+        <div class="orbit-lines mars-line"></div>
+        <div class="orbit-lines jupiter-line"></div>
+        <div class="orbit-lines saturn-line"></div>
+        <div class="orbit-lines uranus-line"></div>
+        <div class="orbit-lines neptune-line"></div>
+
+        <!-- side card -->
+        <div class="solar-side-card flex-center" id="solarSideCard">
+          <div class="solar-side-info" id="sideInfoSun">
+            <div class="solar-header-container">
+              <div class="close-button" onclick="closeSidePanel()">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+              <h3>Sun <span class="text-yellow">Facts</span></h3>
+            </div>
+
+            <div class="side-points">
+              <div class="fact-count">1</div>
+              <p>
+                The energy created by the Sun’s core is nuclear fusion. This
+                huge amount of energy is produced when four hydrogen nuclei are
+                combined into one helium nucleus.
+              </p>
+            </div>
+            <div class="side-points">
+              <div class="fact-count">2</div>
+              <p>
+                The Sun is halfway through its life. At 4.5 billion years old,
+                the Sun has burned off around half of its hydrogen stores and
+                has enough left to continue burning hydrogen for another 5
+                billion years. Currently the Sun is a yellow dwarf star.
+              </p>
+            </div>
+            <div class="side-points">
+              <div class="fact-count">3</div>
+              <p>
+                The Sun rotates in the opposite direction to Earth with the Sun
+                rotating from west to east instead of east to west like Earth.
+              </p>
+            </div>
+            <div class="side-points">
+              <div class="fact-count">4</div>
+              <p>
+                The Sun has a powerful magnetic field. When magnetic energy is
+                released by the Sun during magnetic storms, solar flares occur
+                which we see on Earth as sunspots. Sunspots are dark areas on
+                the Sun’s surface caused by magnetic variations. The reason they
+                appear dark is due to their temperature being much lower than
+                surrounding areas.
+              </p>
+            </div>
+          </div>
+
+          <div class="solar-side-info hidden" id="sideInfoMercury">
+            <div class="solar-header-container">
+              <div class="close-button" onclick="closeSidePanel()">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+              <h3>Mercury <span class="text-yellow">Facts</span></h3>
+            </div>
+
+            <div class="side-points">
+              <div class="fact-count">1</div>
+              <p>
+                After the Earth, Mercury is the second densest planet. Despite
+                its small size, Mercury is very dense because it is composed
+                mainly of heavy metals and rock.
+              </p>
+            </div>
+            <div class="side-points">
+              <div class="fact-count">2</div>
+              <p>
+                Mercury is named after the messenger of the Roman gods, who is
+                also known as Hermes in Greek mythology. This is because of the
+                speed in which Mercury orbits the Sun and the speed with which
+                Mercury the Roman deity was able to deliver messages.
+              </p>
+            </div>
+            <div class="side-points">
+              <div class="fact-count">3</div>
+              <p>
+                It was once believed that a planet called Vulcan existed between
+                the orbit of Mercury and the Sun – however the existence of such
+                a planet was never found.
+              </p>
+            </div>
+            <div class="side-points">
+              <div class="fact-count">4</div>
+              <p>
+                Mercury is the only planet which doesn’t rotate exactly once
+                every year – instead rotating three times for every two orbits
+                of the Sun. This is because it is nearly tidally locked to the
+                Sun.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <figure class="solar-sun" onclick="openSidePanel('sideInfoSun')">
+          <img src="images/sun.png" alt="image of sun" />
+        </figure>
+
+        <figure
+          class="solar-mercury"
+          onclick="openSidePanel('sideInfoMercury')"
+        >
+          <img src="images/mercury.png" alt="mercury is the first planet" />
+        </figure>
+
+        <figure class="solar-venus">
+          <img src="images/venus.png" alt="venus is the second planet" />
+        </figure>
+
+        <figure class="solar-earth">
+          <img src="images/earth.png" alt="earth is the third planet" />
+        </figure>
+
+        <figure class="solar-mars">
+          <img src="images/mars.png" alt="mars is the fourth planet" />
+        </figure>
+
+        <figure class="solar-jupiter">
+          <img src="images/jupiter.png" alt="jupiter is the fifth planet" />
+        </figure>
+
+        <figure class="solar-saturn">
+          <img src="images/saturn.png" alt="saturn is the sixth planet" />
+        </figure>
+
+        <figure class="solar-uranus">
+          <img src="images/uranus.png" alt="uranus is the seventh planet" />
+        </figure>
+        <figure class="solar-neptune">
+          <img src="images/neptune.png" alt="neptune is the eighth planet" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- Facts -->
 
     <section class="planet-info" id="planetData">
       <div class="hidden" id="earth-info">
