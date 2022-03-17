@@ -18,6 +18,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+      integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -25,41 +32,101 @@
       <a href="#home" class="logo"
         >Planet<span class="text-yellow fw-700">Points</span></a
       >
-      <a
-        href="#planet-carousel"
-        class="nav-link"
-        onclick="currentSlide(1); viewFacts('mercury-info')"
-        >Mercury</a
-      >
-      <a
-        href="#planet-carousel"
-        class="nav-link"
-        onclick="currentSlide(2) ; viewFacts('venus-info')"
-        >Venus</a
-      >
-      <a
-        href="#planet-carousel"
-        class="nav-link"
-        onclick="currentSlide(3) ; viewFacts('earth-info')"
-        >Earth</a
-      >
-      <a href="#planet-carousel" class="nav-link" onclick="currentSlide(4)"
-        >Mars</a
-      >
-      <a href="#planet-carousel" class="nav-link" onclick="currentSlide(5)"
-        >Jupiter</a
-      >
-      <a href="#planet-carousel" class="nav-link" onclick="currentSlide(6)"
-        >Saturn</a
-      >
-      <a href="#planet-carousel" class="nav-link" onclick="currentSlide(7)"
-        >Uranus</a
-      >
-      <a href="#planet-carousel" class="nav-link" onclick="currentSlide(8)"
-        >Neptune</a
-      >
+
+      <div class="nav-list">
+        <a href="#solar-system" class="nav-link">Solar System</a>
+
+        <a href="#apollo11" class="nav-link">Apollo 11</a>
+
+        <a href="#metrics" class="nav-link">Planet Metrics</a>
+
+        <details>
+          <summary class="planets-dropdown fw-300">Planets</summary>
+          <ul>
+            <li>
+              <i class="fa-solid fa-shuttle-space"></i>
+              <a
+                href="#planet-carousel"
+                class="nav-link"
+                onclick="currentSlide(1); viewFacts('mercury-info')"
+                >Mercury</a
+              >
+            </li>
+
+            <li>
+              <i class="fa-solid fa-shuttle-space"></i>
+              <a
+                href="#planet-carousel"
+                class="nav-link"
+                onclick="currentSlide(2) ; viewFacts('venus-info')"
+                >Venus</a
+              >
+            </li>
+
+            <li>
+              <i class="fa-solid fa-shuttle-space"></i>
+              <a
+                href="#planet-carousel"
+                class="nav-link"
+                onclick="currentSlide(3) ; viewFacts('earth-info')"
+                >Earth</a
+              >
+            </li>
+
+            <li>
+              <i class="fa-solid fa-shuttle-space"></i>
+              <a
+                href="#planet-carousel"
+                class="nav-link"
+                onclick="currentSlide(4)"
+                >Mars
+              </a>
+            </li>
+
+            <li>
+              <i class="fa-solid fa-shuttle-space"></i>
+              <a
+                href="#planet-carousel"
+                class="nav-link"
+                onclick="currentSlide(5)"
+                >Jupiter
+              </a>
+            </li>
+
+            <li>
+              <i class="fa-solid fa-shuttle-space"></i>
+              <a
+                href="#planet-carousel"
+                class="nav-link"
+                onclick="currentSlide(6)"
+                >Saturn</a
+              >
+            </li>
+
+            <li>
+              <i class="fa-solid fa-shuttle-space"></i>
+              <a
+                href="#planet-carousel"
+                class="nav-link"
+                onclick="currentSlide(7)"
+                >Uranus</a
+              >
+            </li>
+
+            <li>
+              <i class="fa-solid fa-shuttle-space"></i>
+              <a
+                href="#planet-carousel"
+                class="nav-link"
+                onclick="currentSlide(8)"
+                >Neptune</a
+              >
+            </li>
+          </ul>
+        </details>
+      </div>
     </nav>
-    <header>
+    <header id="home">
       <div class="carousel" id="planet-carousel">
         <!-- arrows -->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -237,7 +304,11 @@
 
     <!-- Solar System -->
 
-    <section class="solar-system-container">
+    <section
+      class="solar-system-container"
+      id="solar-system"
+      title="click on planet image to view its facts"
+    >
       <div class="solar-system">
         <div class="orbit-lines mercury-line"></div>
         <div class="orbit-lines venus-line"></div>
@@ -1033,7 +1104,9 @@
       </div>
     </section>
 
-    <section class="apollo-section flex-center">
+    <!-- apollo 11 -->
+
+    <section class="apollo-section flex-center" id="apollo11">
       <div class="space-event">
         <div class="space-item">
           <img src="/images/apollo-2.jpg" class="space-image" />
@@ -1063,7 +1136,9 @@
       </div>
     </section>
 
-    <section class="flex-center">
+    <!-- metrics -->
+
+    <section class="flex-center" id="metrics">
       <div class="planet-metric">
         <div class="planet-card">
           <div class="planet-icon flex-center">
@@ -1307,7 +1382,65 @@
       </div>
     </section>
 
-    <footer></footer>
+    <footer>
+      <div class="footer-content">
+        <h3 class="fw-300">
+          <a href="#home" class="logo"
+            >Planet<span class="text-yellow fw-700">Points</span></a
+          >
+        </h3>
+        <div class="footer-links-group fw-300">
+          <a
+            href="#planet-carousel"
+            class="footer-link"
+            onclick="currentSlide(1); viewFacts('mercury-info')"
+            >Mercury</a
+          >
+          <a
+            href="#planet-carousel"
+            class="footer-link"
+            onclick="currentSlide(2) ; viewFacts('venus-info')"
+            >Venus</a
+          >
+          <a
+            href="#planet-carousel"
+            class="footer-link"
+            onclick="currentSlide(3) ; viewFacts('earth-info')"
+            >Earth</a
+          >
+          <a
+            href="#planet-carousel"
+            class="footer-link"
+            onclick="currentSlide(4)"
+            >Mars</a
+          >
+          <a
+            href="#planet-carousel"
+            class="footer-link"
+            onclick="currentSlide(5)"
+            >Jupiter</a
+          >
+          <a
+            href="#planet-carousel"
+            class="footer-link"
+            onclick="currentSlide(6)"
+            >Saturn</a
+          >
+          <a
+            href="#planet-carousel"
+            class="footer-link"
+            onclick="currentSlide(7)"
+            >Uranus</a
+          >
+          <a
+            href="#planet-carousel"
+            class="footer-link"
+            onclick="currentSlide(8)"
+            >Neptune</a
+          >
+        </div>
+      </div>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
