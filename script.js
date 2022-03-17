@@ -67,8 +67,8 @@ function scrollAnimation(planet){
               if(!entry.isIntersecting){
                 return;
                   
-              }else{
-                  entry.target.classList.add("slideUp");
+              }else{              
+                  entry.target.classList.add("slideUp");                
                   appearOnScroll.unobserve(entry.target);
               }
         })
