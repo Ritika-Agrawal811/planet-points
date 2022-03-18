@@ -43,82 +43,82 @@
         <details>
           <summary class="planets-dropdown fw-300">Planets</summary>
           <ul>
-            <li>
+            <li onclick="currentSlide(1) ; moveToPlanetCarousel()">
               <i class="fa-solid fa-shuttle-space"></i>
               <a
                 href="#planet-carousel"
                 class="nav-link"
-                onclick="currentSlide(1); viewFacts('mercury-info')"
+                onclick="viewFacts('mercury-info')"
                 >Mercury</a
               >
             </li>
 
-            <li>
+            <li onclick="currentSlide(2) ;  moveToPlanetCarousel() ">
               <i class="fa-solid fa-shuttle-space"></i>
               <a
                 href="#planet-carousel"
                 class="nav-link"
-                onclick="currentSlide(2) ; viewFacts('venus-info')"
+                onclick="viewFacts('venus-info')"
                 >Venus</a
               >
             </li>
 
-            <li>
+            <li onclick="currentSlide(3) ;  moveToPlanetCarousel() ">
               <i class="fa-solid fa-shuttle-space"></i>
               <a
                 href="#planet-carousel"
                 class="nav-link"
-                onclick="currentSlide(3) ; viewFacts('earth-info')"
+                onclick="viewFacts('earth-info')"
                 >Earth</a
               >
             </li>
 
-            <li>
+            <li onclick="currentSlide(4) ;  moveToPlanetCarousel() ">
               <i class="fa-solid fa-shuttle-space"></i>
               <a
                 href="#planet-carousel"
                 class="nav-link"
-                onclick="currentSlide(4)"
+                onclick="viewFacts('mars-info')"
                 >Mars
               </a>
             </li>
 
-            <li>
+            <li onclick="currentSlide(5) ;  moveToPlanetCarousel() ">
               <i class="fa-solid fa-shuttle-space"></i>
               <a
                 href="#planet-carousel"
                 class="nav-link"
-                onclick="currentSlide(5)"
+                onclick="viewFacts('jupiter-info')"
                 >Jupiter
               </a>
             </li>
 
-            <li>
+            <li onclick="currentSlide(6) ;  moveToPlanetCarousel() ">
               <i class="fa-solid fa-shuttle-space"></i>
               <a
                 href="#planet-carousel"
                 class="nav-link"
-                onclick="currentSlide(6)"
+                onclick="viewFacts('saturn-info')"
                 >Saturn</a
               >
             </li>
 
-            <li>
+            <li onclick="currentSlide(7) ;  moveToPlanetCarousel() ">
               <i class="fa-solid fa-shuttle-space"></i>
               <a
                 href="#planet-carousel"
                 class="nav-link"
-                onclick="currentSlide(7)"
+                onclick="viewFacts('uranus-info')"
                 >Uranus</a
               >
             </li>
 
-            <li>
+            <li onclick="currentSlide(8) ;  moveToPlanetCarousel() ">
               <i class="fa-solid fa-shuttle-space"></i>
               <a
                 href="#planet-carousel"
                 class="nav-link"
-                onclick="currentSlide(8)"
+                onclick="viewFacts('neptune-info')"
                 >Neptune</a
               >
             </li>
@@ -210,7 +210,9 @@
               Phobos and Deimos, which are small and irregularly shaped.
             </p>
 
-            <button class="learn-more-btn">Learn More</button>
+            <button class="learn-more-btn" onclick="viewFacts('mars-info')">
+              Learn More
+            </button>
           </div>
           <div class="stage">
             <figure class="planet mars"></figure>
@@ -231,7 +233,9 @@
               telescopes first saw it.
             </p>
 
-            <button class="learn-more-btn">Learn More</button>
+            <button class="learn-more-btn" onclick="viewFacts('jupiter-info')">
+              Learn More
+            </button>
           </div>
           <div class="stage">
             <figure class="planet jupiter"></figure>
@@ -252,7 +256,9 @@
               moon in the Solar System to have a substantial atmosphere.
             </p>
 
-            <button class="learn-more-btn">Learn More</button>
+            <button class="learn-more-btn" onclick="viewFacts('saturn-info')">
+              Learn More
+            </button>
           </div>
           <div class="stage">
             <figure class="saturn"></figure>
@@ -272,7 +278,9 @@
               larger gas giants Jupiter and Saturn.
             </p>
 
-            <button class="learn-more-btn">Learn More</button>
+            <button class="learn-more-btn" onclick="viewFacts('uranus-info')">
+              Learn More
+            </button>
           </div>
           <div class="stage">
             <figure class="planet uranus"></figure>
@@ -293,7 +301,9 @@
               to as as one of the solar system's two ice giant planets.
             </p>
 
-            <button class="learn-more-btn">Learn More</button>
+            <button class="learn-more-btn" onclick="viewFacts('neptune-info')">
+              Learn More
+            </button>
           </div>
           <div class="stage">
             <figure class="planet neptune"></figure>
@@ -304,11 +314,8 @@
 
     <!-- Solar System -->
 
-    <section
-      class="solar-system-container"
-      id="solar-system"
-      title="click on planet image to view its facts"
-    >
+    <section class="solar-system-container" id="solar-system">
+      <div class="blob">Hover</div>
       <div class="solar-system">
         <div class="orbit-lines mercury-line"></div>
         <div class="orbit-lines venus-line"></div>
@@ -764,121 +771,318 @@
     <!-- Facts -->
 
     <section class="planet-info" id="planetData">
-      <div class="hidden" id="earth-info">
+      <div class="hidden" id="neptune-info">
         <div class="planet-info-grid">
-          <div class="facts">
+          <div class="fact-image">
+            <img src="/images/neptune1.jpg" />
+          </div>
+          <div class="facts" id="fact2">
             <div class="fact-count">1</div>
-            <h4>PROTECTIVE SHIELD</h4>
+            <h4>GASSY</h4>
             <p>
-              Our atmosphere protects us from incoming meteoroids, most of which
-              break up in our atmosphere before they can strike the surface.
+              Neptune's atmosphere is made up mostly of molecular hydrogen,
+              atomic helium and methane.
+            </p>
+          </div>
+          <div class="facts">
+            <div class="fact-count">2</div>
+            <h4>ONE VOYAGE THERE</h4>
+            <p>
+              Voyager 2 is the only spacecraft to have visited Neptune. No
+              spacecraft has orbited this distant planet to study it at length
+              and up close.
             </p>
           </div>
           <div class="fact-image">
-            <img src="/images/mercury1.jpg" />
+            <img src="/images/neptune2.png" />
           </div>
           <div class="fact-image">
-            <img src="/images/mercury2.jpg" />
+            <img src="/images/neptune3.jpg" />
+          </div>
+          <div class="facts">
+            <div class="fact-count">3</div>
+            <h4>FAINT RINGS</h4>
+            <p>
+              Neptune has at least five main rings and four more ring arcs,
+              which are clumps of dust and debris likely formed by the gravity
+              of a nearby moon.
+            </p>
+          </div>
+          <div class="facts">
+            <div class="fact-count">4</div>
+            <h4>ONE COOL FACT</h4>
+            <p>
+              Because of dwarf planet Pluto’s elliptical orbit, Pluto is
+              sometimes closer to the Sun (and us) than Neptune is.
+            </p>
+          </div>
+
+          <div class="fact-image">
+            <img src="/images/neptune4.jpg" />
+          </div>
+        </div>
+      </div>
+      <div class="hidden" id="uranus-info">
+        <div class="planet-info-grid">
+          <div class="fact-image">
+            <img src="/images/uranus1.png" />
           </div>
           <div class="facts" id="fact2">
+            <div class="fact-count">1</div>
+            <h4>GASSY</h4>
+            <p>
+              Uranus has an atmosphere made mostly of molecular hydrogen and
+              atomic helium, with a small amount of methane.
+            </p>
+          </div>
+          <div class="facts">
             <div class="fact-count">2</div>
+            <h4>A BIT LONELY</h4>
+            <p>
+              Voyager 2 is the only spacecraft to fly by Uranus. No spacecraft
+              has orbited this distant planet to study it at length and up
+              close.
+            </p>
+          </div>
+          <div class="fact-image">
+            <img src="/images/uranus4.jpg" />
+          </div>
+          <div class="fact-image">
+            <img src="/images/uranus2.png" />
+          </div>
+          <div class="facts">
+            <div class="fact-count">3</div>
+            <h4>SHORT-ISH DAY, LONGISH YEAR</h4>
+            <p>
+              Uranus takes about 17 hours to rotate once (a Uranian day), and
+              about 84 Earth years to complete an orbit of the Sun (a Uranian
+              year).
+            </p>
+          </div>
+          <div class="facts">
+            <div class="fact-count">4</div>
+            <h4>ONE COOL FACT</h4>
+            <p>
+              Like Venus, Uranus rotates east to west. But Uranus is unique in
+              that it rotates on its side.
+            </p>
+          </div>
+
+          <div class="fact-image">
+            <img src="/images/uranus3.png" />
+          </div>
+        </div>
+      </div>
+      <div class="hidden" id="saturn-info">
+        <div class="planet-info-grid">
+          <div class="fact-image">
+            <img src="/images/saturn4.jpg" />
+          </div>
+          <div class="facts" id="fact2">
+            <div class="fact-count">1</div>
+            <h4>HOT AIR</h4>
+            <p>
+              Saturn's atmosphere is made up mostly of hydrogen (H2) and helium
+              (He).
+            </p>
+          </div>
+          <div class="facts">
+            <div class="fact-count">2</div>
+            <h4>RARE DESTINATION</h4>
+            <p>
+              Few missions have visited Saturn: Pioneer 11 and Voyagers 1 and 2
+              flew by; But Cassini orbited Saturn 294 times from 2004 to 2017.
+            </p>
+          </div>
+          <div class="fact-image">
+            <img src="/images/saturn2.jpg" />
+          </div>
+          <div class="fact-image">
+            <img src="/images/saturn1.png" />
+          </div>
+          <div class="facts">
+            <div class="fact-count">3</div>
+            <h4>SHORT DAY, LONG YEAR</h4>
+            <p>
+              Saturn takes about 10.7 hours (no one knows precisely) to rotate
+              on its axis once—a Saturn “day”—and 29 Earth years to orbit the
+              sun.
+            </p>
+          </div>
+          <div class="facts">
+            <div class="fact-count">4</div>
+            <h4>ADD A DASH OF EARTH</h4>
+            <p>
+              About two tons of Saturn’s mass came from Earth—the Cassini
+              spacecraft was intentionally vaporized in Saturn’s atmosphere in
+              2017.
+            </p>
+          </div>
+
+          <div class="fact-image">
+            <img src="/images/saturn3.jpg" />
+          </div>
+        </div>
+      </div>
+      <div class="hidden" id="jupiter-info">
+        <div class="planet-info-grid">
+          <div class="fact-image">
+            <img src="/images/jupiter1.jpg" />
+          </div>
+          <div class="facts" id="fact2">
+            <div class="fact-count">1</div>
+            <h4>SUPER STORM</h4>
+            <p>
+              Jupiter's Great Red Spot is a gigantic storm that’s about twice
+              the size of Earth and has raged for over a century.
+            </p>
+          </div>
+          <div class="facts">
+            <div class="fact-count">2</div>
+            <h4>MASSIVE WORLD, LIGHT ELEMENTS</h4>
+            <p>
+              Jupiter's atmosphere is made up mostly of hydrogen (H2) and helium
+              (He).
+            </p>
+          </div>
+          <div class="fact-image">
+            <img src="/images/jupiter2.jpg" />
+          </div>
+          <div class="fact-image">
+            <img src="/images/jupiter3.jpg" />
+          </div>
+          <div class="facts">
+            <div class="fact-count">3</div>
+            <h4>WHAT'S INSIDE</h4>
+            <p>
+              Jupiter is a gas giant and so lacks an Earth-like surface. If it
+              has a solid inner core at all, it’s likely only about the size of
+              Earth.
+            </p>
+          </div>
+          <div class="facts">
+            <div class="fact-count">4</div>
+            <h4>EXPLORING JUPITER</h4>
+            <p>
+              Nine spacecraft have visited Jupiter. Seven flew by and two have
+              orbited the gas giant. Juno, the most recent, arrived at Jupiter
+              in 2016.
+            </p>
+          </div>
+
+          <div class="fact-image">
+            <img src="/images/jupiter4.jpg" />
+          </div>
+        </div>
+      </div>
+      <div class="hidden" id="mars-info">
+        <div class="planet-info-grid">
+          <div class="fact-image">
+            <img src="/images/mars1.png" />
+          </div>
+          <div class="facts" id="fact2">
+            <div class="fact-count">1</div>
+            <h4>RUGGED TERRAIN</h4>
+            <p>
+              Mars is a rocky planet. Its solid surface has been altered by
+              volcanoes, impacts, winds, crustal movement and chemical
+              reactions.
+            </p>
+          </div>
+          <div class="facts">
+            <div class="fact-count">2</div>
+            <h4>BRING A SPACESUIT</h4>
+            <p>
+              Mars has a thin atmosphere made up mostly of carbon dioxide (CO2),
+              argon (Ar), nitrogen (N2), and a small amount of oxygen and water
+              vapor.
+            </p>
+          </div>
+          <div class="fact-image">
+            <img src="/images/mars2.png" />
+          </div>
+          <div class="fact-image">
+            <img src="/images/mars3.jpg" />
+          </div>
+          <div class="facts">
+            <div class="fact-count">3</div>
+            <h4>MANY MISSIONS</h4>
+            <p>
+              Several missions have visited this planet, from flybys and
+              orbiters to rovers on the surface.The first true Mars mission
+              success was the Mariner 4 flyby in 1965.
+            </p>
+          </div>
+          <div class="facts">
+            <div class="fact-count">4</div>
+            <h4>RUSTY PLANET</h4>
+            <p>
+              Mars is known as the Red Planet because iron minerals in the
+              Martian soil oxidize, or rust, causing the soil and atmosphere to
+              look red.
+            </p>
+          </div>
+
+          <div class="fact-image">
+            <img src="/images/mars4.jpg" />
+          </div>
+        </div>
+      </div>
+      <div class="hidden" id="earth-info">
+        <div class="planet-info-grid">
+          <div class="fact-image">
+            <img src="/images/earth2.png" />
+          </div>
+          <div class="facts" id="fact2">
+            <div class="fact-count">1</div>
             <h4>SQUASHED SPHERE</h4>
             <p>
               Earth is not a perfect sphere. As it spins, gravity points toward
               the center of our planet, and a centrifugal force pushes outward.
               But since this gravity-opposing force acts perpendicular to the
               axis of Earth, and Earth's axis is tilted, centrifugal force at
-              the equator is not exactly opposed to gravity. This imbalance adds
-              up at the equator, where gravity pushes extra masses of water and
-              earth into a bulge.
+              the equator is not exactly opposed to gravity.
             </p>
           </div>
           <div class="facts">
-            <div class="fact-count">3</div>
+            <div class="fact-count">2</div>
             <h4>GRAVITY ISN'T UNIFORM</h4>
             <p>
               If Earth were a perfect sphere, its gravitational field would be
               the same everywhere. But in reality, the planet's surface is
               bumpy, and water flow, ice drift and the movement of the tectonic
-              plates beneath Earth's crust all change the pull of gravity. These
-              variations are known as gravity anomalies.
+              plates beneath Earth's crust all change the pull of gravity. T
             </p>
           </div>
           <div class="fact-image">
-            <img src="/images/mercury3.jpg" />
+            <img src="/images/earth3.png" />
           </div>
           <div class="fact-image">
-            <img src="/images/mercury4.jpeg" />
+            <img src="/images/earth4.png" />
           </div>
           <div class="facts">
-            <div class="fact-count">4</div>
+            <div class="fact-count">3</div>
             <h4>EARTH USED TO BE PURPLE</h4>
             <p>
               Scientists believe that ancient microbes might have used a
               molecule other than chlorophyll to harness the sun's rays, one
               that gave the organisms a violet hue. It is believed that
               chlorophyll appeared after another light-sensitive molecule called
-              retinal was already present on early Earth. Retinal absorbs green
-              light and reflects back red and violet light, the combination of
-              which appears purple.
+              retinal was already present on early Earth.
             </p>
           </div>
           <div class="facts">
-            <div class="fact-count">5</div>
+            <div class="fact-count">4</div>
             <h4>ONLY PLANET WITH TECTONIC PLATES</h4>
             <p>
               The outer crust of the Earth has multiple regions called tectonic
               plates. Beneath that is a magma interior which causes the plates
-              to move, occasionally crashing into one another. As they collide
-              and pull apart, magma bubbles up and creates fresh crust to form.
+              to move, occasionally crashing into one another.
             </p>
           </div>
+
           <div class="fact-image">
-            <img src="/images/mercury5.jpg" />
-          </div>
-          <div class="fact-image">
-            <img src="/images/mercury6.jpg" />
-          </div>
-          <div class="facts">
-            <div class="fact-count">6</div>
-            <h4>EARTH IS RADIOACTIVE</h4>
-            <p>
-              In total, Earth generates as much as 40 terawatts of heat, half of
-              which comes from radioactive decay in its core, according to a
-              2011 study. Scientists measured particles called antineutrinos
-              that streamed up from Earth's core and found that half of Earth's
-              heat is generated through the radioactive decay of certain
-              elements.
-            </p>
-          </div>
-          <div class="facts">
-            <div class="fact-count">7</div>
-            <h4>DAYS ARE GETTING LONGER</h4>
-            <p>
-              The tides on Earth are strongest when Sun,Moon and Earth are in a
-              line, which happens near full Moon and new Moon. Then the Earth is
-              being stretched out along that line.This results in water moving
-              in the oceans and rocks moving underground, both of which
-              dissipate kinetic energy. The net result is that the Earth is
-              spinning down — the day is getting longer.
-            </p>
-          </div>
-          <div class="fact-image">
-            <img src="/images/mercury7.jpg" />
-          </div>
-          <div class="fact-image">
-            <img src="/images/mercury8.png" />
-          </div>
-          <div class="facts">
-            <div class="fact-count">8</div>
-            <h4>MERCURY HAS ICE</h4>
-            <p>
-              Scientists think that there is ice inside Mercury's craters. The
-              planet's north and south poles are cold and shadowy, which could
-              allow them to retain water ice. Meteorites and comets could have
-              delivered ice to those areas, or water vapor from Mercury's
-              innards could have seeped out and frozen.
-            </p>
+            <img src="/images/earth1.jpg" />
           </div>
         </div>
       </div>
@@ -896,7 +1100,7 @@
             </p>
           </div>
           <div class="fact-image">
-            <img src="/images/venus8.jfif" />
+            <img src="/images/venus1.jfif" />
           </div>
           <div class="fact-image">
             <img src="/images/venus2.png" />
@@ -935,58 +1139,6 @@
               surface temperatures hot enough to melt lead. The greenhouse
               effect makes Venus roughly 700°F (390°C) hotter than it would be
               without a greenhouse effect.
-            </p>
-          </div>
-          <div class="facts">
-            <div class="fact-count">5</div>
-            <h4>STINKY CLOUDS</h4>
-            <p>
-              Venus is permanently shrouded in thick, toxic clouds of sulfuric
-              acid that start at an altitude of 28 to 43 miles (45 to 70
-              kilometers). The clouds smell like rotten eggs!
-            </p>
-          </div>
-          <div class="fact-image">
-            <img src="/images/venus5.jpg" />
-          </div>
-          <div class="fact-image">
-            <img src="/images/venus6.jpg" />
-          </div>
-          <div class="facts">
-            <div class="fact-count">6</div>
-            <h4>SPACECRAFT MAGNET</h4>
-            <p>
-              Venus was the first planet explored by a spacecraft and was
-              intensely studied early in the history of space exploration. Venus
-              was also the first planet whose surface was reached by a
-              spacecraft from Earth. The intense heat means landers have only
-              survived for a couple of hours.
-            </p>
-          </div>
-          <div class="facts">
-            <div class="fact-count">7</div>
-            <h4>LIFE ON VENUS</h4>
-            <p>
-              Venus is an unlikely place for life as we know it, but some
-              scientists theorize microbes might exist high in the clouds where
-              it’s cooler and the pressure is similar to Earth’s surface.
-              Phosphine, a possible indicator of microbial life, has been
-              observed in the clouds.
-            </p>
-          </div>
-          <div class="fact-image">
-            <img src="/images/venus7.jpg" />
-          </div>
-          <div class="fact-image">
-            <img src="/images/venus1.jfif" />
-          </div>
-          <div class="facts">
-            <div class="fact-count">8</div>
-            <h4>BACKWARD SUNRISE</h4>
-            <p>
-              Venus rotates backward on its axis compared to most planets in our
-              solar system. This means the Sun rises in the west and sets in the
-              east, opposite of what we see on Earth.
             </p>
           </div>
         </div>
@@ -1042,62 +1194,6 @@
               Standing on Mercury's surface at its closest approach to the Sun,
               our star would appear more than three times larger than it does on
               Earth.
-            </p>
-          </div>
-          <div class="facts">
-            <div class="fact-count">5</div>
-            <h4>ROBOTIC VISITORS</h4>
-            <p>
-              Two NASA missions have explored Mercury: Mariner 10 was the first
-              to fly by Mercury, and MESSENGER was the first to orbit. ESA's
-              BepiColombo is on its way to Mercury.
-            </p>
-          </div>
-          <div class="fact-image">
-            <img src="/images/mercury5.jpg" />
-          </div>
-          <div class="fact-image">
-            <img src="/images/mercury6.jpg" />
-          </div>
-          <div class="facts">
-            <div class="fact-count">6</div>
-            <h4>EXTREME TEMPERATURE</h4>
-            <p>
-              Even though Mercury is the closest planet to the sun, its surface
-              can still be extremely cold. The temperature during the day can
-              reach 840 degrees Fahrenheit (450 degrees Celsius), but at night,
-              temperatures can get as low as minus 275 F (minus 170 C). That
-              fluctuation equals a temperature swing of more than 1,100 F (600
-              C), the largest of any planet in the solar system.
-            </p>
-          </div>
-          <div class="facts">
-            <div class="fact-count">7</div>
-            <h4>HUGE IRON CORE</h4>
-            <p>
-              Mercury's iron core takes up about 75 percent of the planet's
-              radius. The huge core has more iron in it than any other planet's
-              in the solar system. Scientists aren't exactly sure how Mercury's
-              giant iron core formed, but researchers think it has something to
-              do with its formation. If the planet formed quickly, it could have
-              left a thin shell of crust over the relatively large core.
-            </p>
-          </div>
-          <div class="fact-image">
-            <img src="/images/mercury7.jpg" />
-          </div>
-          <div class="fact-image">
-            <img src="/images/mercury8.png" />
-          </div>
-          <div class="facts">
-            <div class="fact-count">8</div>
-            <h4>MERCURY HAS ICE</h4>
-            <p>
-              Scientists think that there is ice inside Mercury's craters. The
-              planet's north and south poles are cold and shadowy, which could
-              allow them to retain water ice. Meteorites and comets could have
-              delivered ice to those areas, or water vapor from Mercury's
-              innards could have seeped out and frozen.
             </p>
           </div>
         </div>
@@ -1393,19 +1489,19 @@
           <a
             href="#planet-carousel"
             class="footer-link"
-            onclick="currentSlide(1); viewFacts('mercury-info')"
+            onclick="currentSlide(1)"
             >Mercury</a
           >
           <a
             href="#planet-carousel"
             class="footer-link"
-            onclick="currentSlide(2) ; viewFacts('venus-info')"
+            onclick="currentSlide(2)"
             >Venus</a
           >
           <a
             href="#planet-carousel"
             class="footer-link"
-            onclick="currentSlide(3) ; viewFacts('earth-info')"
+            onclick="currentSlide(3)"
             >Earth</a
           >
           <a

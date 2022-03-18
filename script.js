@@ -136,3 +136,10 @@ function scrollAnimation(planet){
 
   }
 
+  // move to planet carousel 
+  function  moveToPlanetCarousel(){
+    document.getElementById('planet-carousel').scrollIntoView();
+
+    document.querySelector("details").removeAttribute('open');
+  }
+
