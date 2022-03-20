@@ -116,7 +116,7 @@ function scrollAnimation(planet){
   let sidePanel = document.getElementById("solarSideCard");
 
   function closeSidePanel(){  
-    sidePanel.style.right = "-50%";   
+    sidePanel.style.right = "-100%";   
 
   }
 
@@ -138,8 +138,15 @@ function scrollAnimation(planet){
 
   // move to planet carousel 
   function  moveToPlanetCarousel(){
-    document.getElementById('planet-carousel').scrollIntoView();
-
-    document.querySelector("details").removeAttribute('open');
+    document.getElementById('planet-carousel').scrollIntoView();     
   }
+
+  // reset dropdown
+
+  function resetDropdown(){
+   
+      document.querySelector("details").removeAttribute('open'); 
+  }
+
+ 
 

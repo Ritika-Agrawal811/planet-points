@@ -79,7 +79,6 @@ header {
 /* navbar */
 
 nav {
-  width: 80%;
   height: 4em;
   display: flex;
   justify-content: space-around;
@@ -506,7 +505,7 @@ img {
 /* Planet Metric */
 
 .planet-metric {
-  width: 90%;
+  width: 100%;
   max-width: 1300px;
   display: grid;
   grid-template: repeat(2, 265px) / repeat(4, 1fr);
@@ -739,12 +738,12 @@ img {
 
 .solar-side-card {
   position: absolute;
-  right: -50%;
+  right: -100%;
   width: 40%;
   height: 100%;
   background: rgba(8, 8, 8, 0.8);
   z-index: 5;
-  transition: all 750ms ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .solar-side-info {
@@ -807,7 +806,7 @@ img {
 .orbit-lines {
   position: absolute;
   border-radius: 50%;
-  border: 1px solid rgb(78, 74, 74);
+  border: 1px solid rgba(78, 74, 74, 0.6);
   left: -10em;
   top: 50%;
   transform: translateY(-50%);
@@ -868,61 +867,60 @@ img {
 }
 
 .solar-sun {
-  width: 180px;
-  height: 180px;
+  width: 11.5em;
+  height: 11.5em;
 }
 
 .solar-mercury {
-  width: 30px;
-  height: 30px;
+  width: 1.875em;
+  height: 1.875em;
 }
 
 .solar-venus {
-  width: 45px;
-  height: 45px;
+  width: 2.85em;
+  height: 2.85em;
 }
 
 .solar-earth {
-  width: 60px;
-  height: 60px;
+  width: 4em;
+  height: 4em;
 }
 
 .solar-mars {
-  width: 55px;
-  height: 55px;
+  width: 3.5em;
+  height: 3.5em;
 }
 
 .solar-jupiter {
-  width: 120px;
-  height: 120px;
+  width: 7.5em;
+  height: 7.5em;
 }
 
 .solar-saturn {
-  width: 110px;
-  height: 110px;
+  width: 7.25em;
+  height: 7.25em;
 }
 
 .solar-uranus {
-  width: 80px;
-  height: 80px;
+  width: 5em;
+  height: 5em;
 }
 
 .solar-neptune {
-  width: 70px;
-  height: 70px;
+  width: 4.35em;
+  height: 4.35em;
 }
 
 /* apollo 11 section */
 
 .apollo-section {
-  height: 90vh;
-  margin-top: 3em;
   background-image: radial-gradient(
     90% 75% at 50% 55%,
     #080527 20%,
     transparent 65%
   );
   scroll-margin-top: 4em;
+  padding-top: 3em;
 }
 
 .space-event {
@@ -977,7 +975,7 @@ img {
 }
 
 .space-info p {
-  line-height: 25px;
+  line-height: 1.625em;
 }
 
 /* footer */
@@ -1069,7 +1067,6 @@ footer {
   }
 
   .planet-metric {
-    width: 100%;
     grid-gap: 3em;
     margin: 4em 0;
   }
@@ -1085,5 +1082,435 @@ footer {
 
   .footer-content {
     height: 40vh;
+  }
+
+  /* solar lines */
+
+  .solar-system-container {
+    height: 80vh;
+  }
+
+  .solar-system {
+    height: 70vh;
+  }
+
+  .solar-side-card {
+    width: 50%;
+  }
+
+  .mercury-line {
+    width: 37.5%;
+    height: 25%;
+  }
+
+  .venus-line {
+    width: 44.5%;
+    height: 33%;
+  }
+
+  .earth-line {
+    width: 53%;
+    height: 40%;
+  }
+
+  .mars-line {
+    width: 61%;
+    height: 50%;
+  }
+
+  .jupiter-line {
+    width: 73%;
+    height: 58%;
+  }
+
+  .saturn-line {
+    width: 86%;
+    height: 66%;
+  }
+
+  .uranus-line {
+    width: 97.5%;
+    height: 75%;
+  }
+
+  .neptune-line {
+    width: 107%;
+    height: 85%;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+
+  .nav-list {
+    place-items: center;
+  }
+
+  .stage {
+    width: 300px;
+    height: 300px;
+    align-self: center;
+  }
+
+  .planet-info-grid {
+    display: grid;
+    grid-template: repeat(4, 300px) / repeat(2, 1fr);
+  }
+
+  .planet-info p {
+    width: 75%;
+  }
+
+  .space-event {
+    width: 95%;
+    height: 75vh;
+    margin-bottom: 3em;
+  }
+  .space-item:nth-child(1) .space-image {
+    top: 65%;
+  }
+
+  .space-item:nth-child(4) .space-image {
+    top: 30%;
+  }
+
+  .planet-metric {
+    width: 90%;
+    display: grid;
+    grid-template: repeat(3, 240px) / repeat(3, 1fr);
+    grid-gap: 2em;
+    margin: 3em;
+  }
+
+  .planet-card {
+    padding: 0 1em;
+  }
+
+  .metrics h5 {
+    font-size: 1rem;
+  }
+
+  .metrics p {
+    font-size: 0.95rem;
+  }
+
+  img {
+    position: absolute;
+    height: 70%;
+  }
+
+  footer {
+    background: url(/images/land.png) 50% 100%/ 100% 80%,
+      url(/images/moon.png) 50% 100% / 35% 60%,
+      radial-gradient(
+        80% 100% at 50% 70%,
+        rgba(255, 255, 255, 0.199) 10%,
+        transparent 80%
+      );
+    background-repeat: no-repeat;
+  }
+
+  .footer-content {
+    height: 40vh;
+  }
+
+  /* solar lines */
+
+  .solar-system-container {
+    height: 80vh;
+  }
+
+  .solar-system {
+    height: 80vh;
+  }
+
+  .solar-side-card {
+    width: 50%;
+  }
+
+  .mercury-line {
+    width: 40.25%;
+    height: 23%;
+  }
+
+  .venus-line {
+    width: 46.5%;
+    height: 30%;
+  }
+
+  .earth-line {
+    width: 55%;
+    height: 38%;
+  }
+
+  .mars-line {
+    width: 63%;
+    height: 45%;
+  }
+
+  .jupiter-line {
+    width: 75%;
+    height: 52%;
+  }
+
+  .saturn-line {
+    width: 88%;
+    height: 62%;
+  }
+
+  .uranus-line {
+    width: 100%;
+    height: 70%;
+  }
+
+  .neptune-line {
+    width: 110%;
+    height: 80%;
+  }
+}
+
+@media (max-width: 424px) {
+  html {
+    font-size: 10px;
+  }
+
+  .planet-info {
+    display: none;
+    padding: 3em 0;
+    scroll-margin-top: 3em;
+  }
+
+  .planet-info-grid {
+    display: grid;
+    grid-template: repeat(4, 200px) / repeat(2, 1fr);
+  }
+
+  .planet-info p {
+    width: 80%;
+    text-align: center;
+    line-height: 1.25em;
+    margin-top: 0.75em;
+  }
+
+  .planet-info h4 {
+    text-align: center;
+  }
+
+  img {
+    position: absolute;
+    height: 55%;
+  }
+
+  .carousel {
+    height: 100vh;
+    position: relative;
+    margin-top: 4em;
+  }
+
+  .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: 1.25fr 1.5fr/100%;
+    place-items: center;
+    display: none;
+  }
+
+  .stage {
+    width: 300px;
+    height: 300px;
+    grid-row: 1/2;
+  }
+
+  .description {
+    grid-row: 2/-1;
+    width: 85%;
+    justify-self: center;
+    align-self: start;
+  }
+
+  .description h2 {
+    font-size: 3.5rem;
+  }
+
+  .description h3 {
+    font-size: 1.75rem;
+  }
+
+  .description .content {
+    margin-top: 1em;
+    line-height: 18px;
+  }
+
+  .prev,
+  .next {
+    font-size: 1.5rem;
+    top: 45%;
+  }
+
+  .space-event {
+    width: 95%;
+    height: 90vh;
+    display: grid;
+    grid-template: repeat(3, 1fr) / 1fr 1fr;
+    margin: 3em 0;
+  }
+
+  .space-item:nth-child(1) .space-image,
+  .space-item:nth-child(4) .space-image,
+  .space-item:nth-child(6) .space-image {
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+  }
+
+  .space-info h3 {
+    font-size: 2rem;
+    margin-bottom: 0.25em;
+    padding-bottom: 0.25em;
+  }
+
+  .space-info {
+    padding: 2em 0.5em;
+  }
+
+  .planet-metric {
+    width: 100%;
+    display: grid;
+    grid-template: repeat(4, 240px) / repeat(2, 1fr);
+    gap: 2.5em;
+    margin: 3em 1em;
+  }
+
+  .planet-card {
+    padding: 0 0.75em;
+  }
+
+  .metrics h5 {
+    font-size: 1.15rem;
+  }
+
+  .metrics p {
+    font-size: 1rem;
+  }
+
+  footer {
+    background: url(/images/land.png) 50% 100%/ 100% 80%,
+      url(/images/moon.png) 50% 100% / 60% 60%,
+      radial-gradient(
+        80% 100% at 50% 70%,
+        rgba(255, 255, 255, 0.199) 10%,
+        transparent 80%
+      );
+    background-repeat: no-repeat;
+  }
+
+  .footer-content {
+    width: 90%;
+    height: 38vh;
+  }
+
+  /* solar system */
+
+  .solar-system-container {
+    height: 100vh;
+  }
+
+  .solar-header-container,
+  .side-points {
+    display: grid;
+    grid-template: 7em/ 4em auto;
+  }
+
+  .solar-system {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .solar-side-card {
+    width: 100%;
+    z-index: 20;
+    background: rgba(8, 8, 8, 0.9);
+  }
+
+  .solar-side-info {
+    padding: 0 1.65em;
+    position: absolute;
+  }
+
+  .side-points p {
+    font-size: 1.15rem;
+  }
+
+  .side-points .fact-count::before {
+    top: -182%;
+    height: 180%;
+  }
+
+  .orbit-lines {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(78, 74, 74, 0.3);
+    left: 50%;
+    top: -10px;
+    transform: translateX(-50%);
+  }
+
+  .mercury-line {
+    width: 25%;
+    height: 27%;
+  }
+
+  .venus-line {
+    width: 30%;
+    height: 33%;
+  }
+
+  .earth-line {
+    width: 38%;
+    height: 41%;
+  }
+
+  .mars-line {
+    width: 45%;
+    height: 48%;
+  }
+
+  .jupiter-line {
+    width: 53%;
+    height: 60%;
+  }
+
+  .saturn-line {
+    width: 63%;
+    height: 75%;
+  }
+
+  .uranus-line {
+    width: 73%;
+    height: 88%;
+  }
+
+  .neptune-line {
+    width: 83%;
+    height: 97%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 376px) {
+  html {
+    font-size: 10px;
+  }
+
+  .stage {
+    width: 250px;
+    height: 250px;
+    grid-row: 1/2;
   }
 }
