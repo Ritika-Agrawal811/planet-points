@@ -1,13 +1,8 @@
-# PlanetPoints
+# Planet<span style="color:#ffcc00">Points</span>
 
- PlanetPoints is a responsive webpage for listing planet details built using HTML,CSS and JavaScript.
+ PlanetPoints is a responsive webpage, I have made to show my love for astronomy :heart_eyes: I have used HTML, CSS and JavaScript.
  
- Live link :- https://flora-tau.vercel.app/
- 
- ## Features :point_down:
- :seedling: Hover effects on plant cards, navigation links and buttons <br/>
- :seedling: Multi frame carousel with animation <br/>
- :seedling: A fixed menu button at bottom right of web page(desktop only) to move to different sections of page <br/>
+ Live link :- https://planet-points.vercel.app/
  
  ## Screenshots :point_down:
  Desktop View | Mobile View
