@@ -1,7 +1,6 @@
 # PlanetPoints
-<hr/>
 
- Flora is a responsive plants webpage built using HTML,CSS and teensy bit of JavaScript.
+ PlanetPoints is a responsive webpage for listing planet details built using HTML,CSS and JavaScript.
  
  Live link :- https://flora-tau.vercel.app/
  
