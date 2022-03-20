@@ -33,6 +33,104 @@
         >Planet<span class="text-yellow fw-700">Points</span></a
       >
 
+      <div
+        class="hamburger-menu"
+        id="hamburgerMenu"
+        onclick="showMobileMenu()"
+      ></div>
+
+      <div class="mobileMenu" id="mobileMenu">
+        <div class="top-section">
+          <a href="#solar-system" class="nav-link" onclick="resetDropdown()"
+            >Solar System</a
+          >
+
+          <a href="#apollo11" class="nav-link" onclick="resetDropdown()"
+            >Apollo 11</a
+          >
+
+          <a href="#metrics" class="nav-link" onclick="resetDropdown()"
+            >Planet Metrics</a
+          >
+        </div>
+
+        <div class="bottom-section">
+          <ul>
+            <li onclick="currentSlide(1) ; moveToPlanetCarousel()">
+              <a
+                href="#planet-carousel"
+                class="nav-link"
+                onclick="viewFacts('mercury-info')"
+                >Mercury</a
+              >
+            </li>
+
+            <li onclick="currentSlide(2) ;  moveToPlanetCarousel() ">
+              <a
+                href="#planet-carousel"
+                class="nav-link"
+                onclick="viewFacts('venus-info')"
+                >Venus</a
+              >
+            </li>
+
+            <li onclick="currentSlide(3) ;  moveToPlanetCarousel() ">
+              <a
+                href="#planet-carousel"
+                class="nav-link"
+                onclick="viewFacts('earth-info')"
+                >Earth</a
+              >
+            </li>
+
+            <li onclick="currentSlide(4) ;  moveToPlanetCarousel() ">
+              <a
+                href="#planet-carousel"
+                class="nav-link"
+                onclick="viewFacts('mars-info')"
+                >Mars
+              </a>
+            </li>
+
+            <li onclick="currentSlide(5) ;  moveToPlanetCarousel() ">
+              <a
+                href="#planet-carousel"
+                class="nav-link"
+                onclick="viewFacts('jupiter-info')"
+                >Jupiter
+              </a>
+            </li>
+
+            <li onclick="currentSlide(6) ;  moveToPlanetCarousel() ">
+              <a
+                href="#planet-carousel"
+                class="nav-link"
+                onclick="viewFacts('saturn-info')"
+                >Saturn</a
+              >
+            </li>
+
+            <li onclick="currentSlide(7) ;  moveToPlanetCarousel() ">
+              <a
+                href="#planet-carousel"
+                class="nav-link"
+                onclick="viewFacts('uranus-info')"
+                >Uranus</a
+              >
+            </li>
+
+            <li onclick="currentSlide(8) ;  moveToPlanetCarousel() ">
+              <a
+                href="#planet-carousel"
+                class="nav-link"
+                onclick="viewFacts('neptune-info')"
+                >Neptune</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
       <div class="nav-list">
         <a href="#solar-system" class="nav-link" onclick="resetDropdown()"
           >Solar System</a

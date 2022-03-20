@@ -148,5 +148,22 @@ function scrollAnimation(planet){
       document.querySelector("details").removeAttribute('open'); 
   }
 
+  // mobile menu
+
+  function showMobileMenu(){
+    let hamburgerMenu = document.getElementById('hamburgerMenu');
+    let mobileMenu = document.getElementById('mobileMenu');
+ 
+    hamburgerMenu.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+
+    setTimeout(()=>{
+      mobileMenu.querySelector('.top-section').classList.toggle('active');
+      mobileMenu.querySelector('.bottom-section').classList.toggle('active');
+    },300);
+    
+
+  }
+
  
 

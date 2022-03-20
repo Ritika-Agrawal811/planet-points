@@ -78,6 +78,11 @@ header {
 
 /* navbar */
 
+.hamburger-menu,
+.mobileMenu {
+  display: none;
+}
+
 nav {
   height: 4em;
   display: flex;
@@ -1286,6 +1291,117 @@ footer {
     font-size: 12px;
   }
 
+  .nav-list {
+    display: none;
+  }
+
+  nav {
+    height: 5em;
+    padding: 0 3em;
+    justify-content: space-between;
+  }
+
+  .hamburger-menu {
+    display: block;
+    background-color: #fff;
+    position: relative;
+    width: 2em;
+    height: 0.1em;
+    border-radius: 20px;
+  }
+
+  .hamburger-menu::before,
+  .hamburger-menu::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: inherit;
+    transform-origin: 0% 0%;
+    transition: all 300ms ease-in-out;
+  }
+
+  .hamburger-menu::before {
+    top: -0.75em;
+  }
+
+  .hamburger-menu::after {
+    top: 0.75em;
+  }
+
+  .hamburger-menu.active {
+    background-color: #000;
+  }
+
+  .hamburger-menu.active::before {
+    transform: rotate(45deg);
+  }
+
+  .hamburger-menu.active::after {
+    transform: rotate(-45deg);
+  }
+
+  .mobileMenu {
+    display: none;
+    position: fixed;
+    top: 4.5em;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 50;
+    grid-template: 1fr 2fr / 100%;
+  }
+
+  .mobileMenu a {
+    font-size: 1.35rem;
+  }
+
+  .top-section {
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    top: 0;
+    left: -100%;
+    transition: all 500ms ease-in-out;
+    background-color: #080527;
+  }
+
+  .bottom-section {
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    bottom: 0;
+    right: -100%;
+    background-color: #080527;
+    transition: all 500ms ease-in-out;
+  }
+
+  .top-section,
+  .bottom-section ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .bottom-section ul {
+    list-style-type: none;
+    height: 100%;
+  }
+
+  .mobileMenu.active {
+    display: grid;
+  }
+
+  .top-section.active {
+    left: 0;
+  }
+
+  .bottom-section.active {
+    right: 0;
+  }
+
   .planet-info {
     display: none;
     padding: 3em 0;
@@ -1564,14 +1680,19 @@ footer {
   }
 
   footer {
-    background: url(/images/land.png) 50% 100%/ 100% 80%,
-      url(/images/moon.png) 50% 100% / 60% 55%,
+    background: url(/images/land.png) 50% 100%/ 100% 70%,
+      url(/images/moon.png) 50% 100% / 60% 50%,
       radial-gradient(
         80% 100% at 50% 70%,
         rgba(255, 255, 255, 0.199) 10%,
         transparent 80%
       );
     background-repeat: no-repeat;
+  }
+
+  .footer-content {
+    width: 95%;
+    height: 32vh;
   }
 }
 
@@ -1593,8 +1714,8 @@ footer {
   }
 
   footer {
-    background: url(/images/land.png) 50% 100%/ 100% 80%,
-      url(/images/moon.png) 50% 100% / 60% 50%,
+    background: url(/images/land.png) 50% 100%/ 100% 60%,
+      url(/images/moon.png) 50% 100% / 60% 45%,
       radial-gradient(
         80% 100% at 50% 70%,
         rgba(255, 255, 255, 0.199) 10%,
@@ -1611,5 +1732,10 @@ footer {
   .mercury-line {
     width: 25%;
     height: 27%;
+  }
+
+  .footer-content {
+    width: 95%;
+    height: 30vh;
   }
 }
