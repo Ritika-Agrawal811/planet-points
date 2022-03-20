@@ -1683,7 +1683,7 @@ footer {
     background: url(/images/land.png) 50% 100%/ 100% 70%,
       url(/images/moon.png) 50% 100% / 60% 50%,
       radial-gradient(
-        80% 100% at 50% 70%,
+        80% 100% at 50% 50%,
         rgba(255, 255, 255, 0.199) 10%,
         transparent 80%
       );
@@ -1717,7 +1717,7 @@ footer {
     background: url(/images/land.png) 50% 100%/ 100% 60%,
       url(/images/moon.png) 50% 100% / 60% 45%,
       radial-gradient(
-        80% 100% at 50% 70%,
+        80% 100% at 50% 50%,
         rgba(255, 255, 255, 0.199) 10%,
         transparent 80%
       );
