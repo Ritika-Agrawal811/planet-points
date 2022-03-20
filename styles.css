@@ -1044,7 +1044,7 @@ footer {
 
 @media (min-width: 768px) and (max-width: 1024px) {
   html {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .stage {
@@ -1069,6 +1069,12 @@ footer {
   .planet-metric {
     grid-gap: 3em;
     margin: 4em 0;
+  }
+
+  .planet-card {
+    display: grid;
+    grid-template: repeat(2, 1fr) / 100%;
+    padding: 0 1.25em;
   }
 
   img {
@@ -1099,49 +1105,49 @@ footer {
   }
 
   .mercury-line {
-    width: 37.5%;
+    width: 39%;
     height: 25%;
   }
 
   .venus-line {
-    width: 44.5%;
+    width: 45.5%;
     height: 33%;
   }
 
   .earth-line {
-    width: 53%;
+    width: 54%;
     height: 40%;
   }
 
   .mars-line {
-    width: 61%;
+    width: 62%;
     height: 50%;
   }
 
   .jupiter-line {
-    width: 73%;
+    width: 74%;
     height: 58%;
   }
 
   .saturn-line {
-    width: 86%;
+    width: 87%;
     height: 66%;
   }
 
   .uranus-line {
-    width: 97.5%;
+    width: 99%;
     height: 75%;
   }
 
   .neptune-line {
-    width: 107%;
+    width: 109%;
     height: 85%;
   }
 }
 
 @media (min-width: 425px) and (max-width: 768px) {
   html {
-    font-size: 12px;
+    font-size: 12.5px;
   }
 
   .nav-list {
@@ -1152,6 +1158,10 @@ footer {
     width: 300px;
     height: 300px;
     align-self: center;
+  }
+
+  .description .content {
+    line-height: 18px;
   }
 
   .planet-info-grid {
@@ -1231,12 +1241,12 @@ footer {
   }
 
   .mercury-line {
-    width: 40.25%;
+    width: 41%;
     height: 23%;
   }
 
   .venus-line {
-    width: 46.5%;
+    width: 47.5%;
     height: 30%;
   }
 
@@ -1256,24 +1266,24 @@ footer {
   }
 
   .saturn-line {
-    width: 88%;
+    width: 89%;
     height: 62%;
   }
 
   .uranus-line {
-    width: 100%;
+    width: 101%;
     height: 70%;
   }
 
   .neptune-line {
-    width: 110%;
+    width: 111%;
     height: 80%;
   }
 }
 
 @media (max-width: 424px) {
   html {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .planet-info {
@@ -1320,8 +1330,8 @@ footer {
   }
 
   .stage {
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
     grid-row: 1/2;
   }
 
@@ -1387,15 +1397,15 @@ footer {
   }
 
   .planet-card {
-    padding: 0 0.75em;
+    padding: 0 0.5em;
   }
 
   .metrics h5 {
-    font-size: 1.15rem;
+    font-size: 1rem;
   }
 
   .metrics p {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   footer {
@@ -1464,16 +1474,16 @@ footer {
 
   .mercury-line {
     width: 25%;
-    height: 27%;
+    height: 28%;
   }
 
   .venus-line {
-    width: 30%;
+    width: 30.5%;
     height: 33%;
   }
 
   .earth-line {
-    width: 38%;
+    width: 38.5%;
     height: 41%;
   }
 
@@ -1505,7 +1515,7 @@ footer {
 
 @media (min-width: 320px) and (max-width: 376px) {
   html {
-    font-size: 9px;
+    font-size: 10px;
   }
 
   .stage {
@@ -1520,11 +1530,32 @@ footer {
     justify-self: center;
     align-self: center;
   }
+
+  .description .content {
+    margin-top: 1em;
+    line-height: 16px;
+  }
+
+  .mercury-line {
+    width: 25%;
+    height: 27%;
+  }
+
+  footer {
+    background: url(/images/land.png) 50% 100%/ 100% 80%,
+      url(/images/moon.png) 50% 100% / 60% 55%,
+      radial-gradient(
+        80% 100% at 50% 70%,
+        rgba(255, 255, 255, 0.199) 10%,
+        transparent 80%
+      );
+    background-repeat: no-repeat;
+  }
 }
 
 @media (max-width: 320px) {
   html {
-    font-size: 8px;
+    font-size: 9px;
   }
 
   .stage {
@@ -1542,5 +1573,10 @@ footer {
         transparent 80%
       );
     background-repeat: no-repeat;
+  }
+
+  .description .content {
+    margin-top: 1em;
+    line-height: 15px;
   }
 }
