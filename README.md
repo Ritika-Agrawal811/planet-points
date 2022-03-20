@@ -1,4 +1,4 @@
-# Planet<span style="color:#ffcc00">Points</span>
+# PlanetPoints
 
  PlanetPoints is a responsive webpage, I have made to show my love for astronomy :heart_eyes: I have used HTML, CSS and JavaScript.
  
