@@ -165,5 +165,16 @@ function scrollAnimation(planet){
 
   }
 
+  // reset mobile menu
+  function resetMobileMenu(){
+    let mobileMenu = document.getElementById('mobileMenu');
+ 
+    if(mobileMenu.classList.contains("active")){
+      mobileMenu.classList.remove('active');
+      mobileMenu.querySelector('.top-section').classList.remove('active');
+      mobileMenu.querySelector('.bottom-section').classList.remove('active');
+    }
+  }
+
  
 
