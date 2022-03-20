@@ -85,7 +85,7 @@ nav {
   align-items: center;
   position: fixed;
   width: 100%;
-  z-index: 10;
+  z-index: 30;
   background-color: transparent;
 }
 
@@ -1534,7 +1534,7 @@ footer {
     grid-row: 2/-1;
     width: 85%;
     justify-self: center;
-    align-self: center;
+    align-self: start;
   }
 
   .description .content {
