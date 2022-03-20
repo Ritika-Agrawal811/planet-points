@@ -7,4 +7,4 @@
  ## Screenshots :point_down:
  Desktop View | Mobile View
  ------------ | ------------- 
-<img src="https://res.cloudinary.com/djix6uusx/image/upload/v1647791207/screencapture-planet-points-vercel-app-2022-03-20-21_14_48_o7hisr.png"/>  | <img src="https://res.cloudinary.com/djix6uusx/image/upload/v1647791205/screencapture-planet-points-vercel-app-2022-03-20-21_15_31_m6ajsy.png"/> 
+<img src="https://res.cloudinary.com/djix6uusx/image/upload/v1647791310/screencapture-planet-points-vercel-app-2022-03-20-21_17_45_r4ence.png"/>  | <img src="https://res.cloudinary.com/djix6uusx/image/upload/v1647791205/screencapture-planet-points-vercel-app-2022-03-20-21_15_31_m6ajsy.png"/> 
