@@ -1,4 +1,4 @@
-#PlanetPoints
+# PlanetPoints
 <hr/>
 
  Flora is a responsive plants webpage built using HTML,CSS and teensy bit of JavaScript.
