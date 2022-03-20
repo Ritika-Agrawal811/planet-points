@@ -1494,7 +1494,7 @@ footer {
 
   .uranus-line {
     width: 73%;
-    height: 88%;
+    height: 87%;
   }
 
   .neptune-line {
@@ -1505,12 +1505,42 @@ footer {
 
 @media (min-width: 320px) and (max-width: 376px) {
   html {
-    font-size: 10px;
+    font-size: 9px;
   }
 
   .stage {
-    width: 250px;
-    height: 250px;
+    width: 240px;
+    height: 240px;
     grid-row: 1/2;
+  }
+
+  .description {
+    grid-row: 2/-1;
+    width: 85%;
+    justify-self: center;
+    align-self: center;
+  }
+}
+
+@media (max-width: 320px) {
+  html {
+    font-size: 8px;
+  }
+
+  .stage {
+    width: 240px;
+    height: 240px;
+    grid-row: 1/2;
+  }
+
+  footer {
+    background: url(/images/land.png) 50% 100%/ 100% 80%,
+      url(/images/moon.png) 50% 100% / 60% 55%,
+      radial-gradient(
+        80% 100% at 50% 70%,
+        rgba(255, 255, 255, 0.199) 10%,
+        transparent 80%
+      );
+    background-repeat: no-repeat;
   }
 }
