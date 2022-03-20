@@ -150,9 +150,11 @@ function scrollAnimation(planet){
 
   // mobile menu
 
+  let hamburgerMenu = document.getElementById('hamburgerMenu');
+  let mobileMenu = document.getElementById('mobileMenu');
+
   function showMobileMenu(){
-    let hamburgerMenu = document.getElementById('hamburgerMenu');
-    let mobileMenu = document.getElementById('mobileMenu');
+   
  
     hamburgerMenu.classList.toggle('active');
     mobileMenu.classList.toggle('active');
@@ -167,9 +169,9 @@ function scrollAnimation(planet){
 
   // reset mobile menu
   function resetMobileMenu(){
-    let mobileMenu = document.getElementById('mobileMenu');
  
     if(mobileMenu.classList.contains("active")){
+      hamburgerMenu.classList.remove('active');
       mobileMenu.classList.remove('active');
       mobileMenu.querySelector('.top-section').classList.remove('active');
       mobileMenu.querySelector('.bottom-section').classList.remove('active');
