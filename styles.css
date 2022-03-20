@@ -1524,6 +1524,12 @@ footer {
     grid-row: 1/2;
   }
 
+  .prev,
+  .next {
+    font-size: 1.5rem;
+    top: 42.5%;
+  }
+
   .description {
     grid-row: 2/-1;
     width: 85%;
@@ -1534,11 +1540,27 @@ footer {
   .description .content {
     margin-top: 1em;
     line-height: 16px;
+    font-size: 1.25rem;
   }
 
   .mercury-line {
     width: 25%;
-    height: 27%;
+    height: 25%;
+  }
+
+  .saturn-line {
+    width: 63%;
+    height: 74%;
+  }
+
+  .uranus-line {
+    width: 73%;
+    height: 86%;
+  }
+
+  .neptune-line {
+    width: 83%;
+    height: 96%;
   }
 
   footer {
@@ -1564,9 +1586,15 @@ footer {
     grid-row: 1/2;
   }
 
+  .description .content {
+    margin-top: 1em;
+    line-height: 16px;
+    font-size: 1.25rem;
+  }
+
   footer {
     background: url(/images/land.png) 50% 100%/ 100% 80%,
-      url(/images/moon.png) 50% 100% / 60% 55%,
+      url(/images/moon.png) 50% 100% / 60% 50%,
       radial-gradient(
         80% 100% at 50% 70%,
         rgba(255, 255, 255, 0.199) 10%,
@@ -1578,5 +1606,10 @@ footer {
   .description .content {
     margin-top: 1em;
     line-height: 15px;
+  }
+
+  .mercury-line {
+    width: 25%;
+    height: 27%;
   }
 }
